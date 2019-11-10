@@ -1,0 +1,23 @@
+title: CSS Advanced
+email: victoriakaramanova@gmail.com
+description: Hi there!
+baseurl: 
+url: ""
+twitter_username: victoriakaramanova
+github_username:  victoriakaramanova
+
+# Build settings
+plugins:
+  - jekyll-feed
+
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
