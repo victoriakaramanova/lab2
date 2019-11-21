@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/css/site.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
 </head>
-<body>
+<body class="page-{{ page.title | slugify}}">
 
     <div class="site">
 
@@ -33,6 +33,9 @@
         </main>
 
         <footer class="site-footer">
+
+            {% include navigation.html location="footer" %}
+            
             <p>{{ site.title }} &copy; All rights reserved</p>
         </footer>
     </div>

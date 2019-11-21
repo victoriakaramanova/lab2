@@ -20,6 +20,7 @@
     text-decoration: none;
 }
 
+.nav .current_page a,
 .nav a:hover {
     background: #090;
     color: #FFF;
