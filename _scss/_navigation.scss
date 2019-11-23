@@ -1,0 +1,56 @@
+.nav {
+    text-align: right;
+    padding-top: 0.5em;
+
+    ul {
+        display: flex;
+
+        li {
+            display: block;
+            margin: 0 0.7em;
+            transform: translate(0,-5em);
+            opacity: 0;
+            transition: opacity 0.3s ease-in, 
+                transform 0.3s ease-in;
+
+            .loaded & {
+                opacity: 1;
+                transform: translate(0,0);
+            }
+
+            @for $i from 1 through 4 {
+                &:nth-child(#{$i}) {transition-delay: $i*0.1s;}
+            }
+        }
+    }
+
+    a {
+        display: flex;
+        padding: 0.5em 1em;
+        background: #EEE;
+        color: #333;
+        text-decoration: none;
+
+        &:before {
+            display: block;
+            margin-right: 0.5em;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+        }
+
+        @at-root .nav .current_page a,
+        &:hover {
+        background: #090;
+        color: #FFF;
+    }
+}
+
+    li.page-title-about a:before {
+        content: "\f47f";
+    }
+
+    li.page-title-contacts a:before {
+        content: "\f2a0";
+    }
+}
+
