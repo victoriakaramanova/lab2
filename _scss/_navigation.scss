@@ -2,7 +2,17 @@
     text-align: right;
     padding-top: 0.5em;
 
+    @include bp(mobile) {
+        display: none;
+    }
+    
     ul {
+        padding: 0;
+        margin: 0;
+        // @include bp(desktop) {
+        //     border-top: 2px solid #000;
+        // }
+
         display: flex;
 
         li {
@@ -54,3 +64,21 @@
     }
 }
 
+.nav-toggle {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+
+    &:checked + .site .site-header .nav {
+        @include bp(mobile) {
+            display: block;
+        }
+    }
+
+    &-label {
+        @include bp(desktop) {
+            display: none;
+        }
+
+    } 
+}

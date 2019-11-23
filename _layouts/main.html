@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ site.title }}</title>
+    <title>
+        {% if page.title != "Home" %}
+            {{ page.title}} | {{ site.title }}
+        {% else %}
+            {{ site.title }}
+        {% endif %}
+    </title>
     <link rel="shortcut icon" href="/images/favicon-16x16.png" type="image/png">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/site.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
@@ -17,6 +23,7 @@
 </head>
 <body class="page-{{ page.title | slugify}}">
 
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
     <div class="site">
 
         <header class="site-header">

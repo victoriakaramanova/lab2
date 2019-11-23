@@ -1,6 +1,9 @@
-<nav class="nav">
+<label for="nav-toggle" class="nav-toggle-label">Menu</label>
+<nav class="nav location={{ include.location }}">
     <ul>
-    {% for current_page in site.pages %}
+    {% assign navigation_pages = site.pages | sort:"order" %}
+
+    {% for current_page in navigation_pages %}
         {% if current_page.title %}
 
             <li class="page-title-{{ current_page.title | slugify }}{% if current_page.url == page.url %} current_page{% endif %}">
