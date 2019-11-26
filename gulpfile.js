@@ -22,9 +22,14 @@ gulp.task("sass", function() {
 	;
 });
 
+// Jekyll-dev
+gulp.task("jekyll-dev", function() {
+	return cp.spawn("bundle", ["exec", "jekyll", "build --baseurl ''"], { stdio: "inherit", shell: true });
+});
+
 // Jekyll
 gulp.task("jekyll", function() {
-	return cp.spawn("bundle", ["exec", "jekyll", "build --baseurl ''", "build"], { stdio: "inherit", shell: true });
+	return cp.spawn("bundle", ["exec", "jekyll", "build"], { stdio: "inherit", shell: true });
 });
 
 gulp.task("watch", function() {
@@ -45,14 +50,14 @@ gulp.task("watch", function() {
 			"./_layouts/*.html",
 			"./_posts/**/*.*"
 		]
-	).on('change', gulp.series('jekyll', 'sass') );
+	).on('change', gulp.series('jekyll-dev', 'sass') );
 
 	gulp.watch( 'docs/**/*.html' ).on('change', browserSync.reload );
 	gulp.watch( 'docs/**/*.js' ).on('change', browserSync.reload );
 });
 
-gulp.task("default", gulp.series('jekyll', 'sass', 'watch'));
+gulp.task("default", gulp.series('jekyll-dev', 'sass', 'watch'));
 
-gulp.task("deploy", function() {
+gulp.task("deploy", gulp.series('jekyll', 'sass', function() {
 	return cp.spawn("git status && git commit -am 'Update' && git pull && git push", { stdio: "inherit", shell: true });
-});
+}));
