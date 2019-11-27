@@ -22,14 +22,14 @@ gulp.task("sass", function() {
 	;
 });
 
-// Jekyll
-gulp.task("jekyll", function() {
-	return cp.spawn("bundle", ["exec", "jekyll", "build"], { stdio: "inherit", shell: true });
-});
-
 // Jekyll-dev
 gulp.task("jekyll-dev", function() {
 	return cp.spawn("bundle", ["exec", "jekyll", "build --baseurl ''"], { stdio: "inherit", shell: true });
+});
+
+// Jekyll
+gulp.task("jekyll", function() {
+	return cp.spawn("bundle", ["exec", "jekyll", "build"], { stdio: "inherit", shell: true });
 });
 
 gulp.task("watch", function() {
