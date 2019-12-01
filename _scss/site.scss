@@ -4,8 +4,12 @@
 @import "reset";
 @import "typography";
 @import "layout";
+@import "site-header";
+@import "site-footer";
 @import "navigation";
-@import "page";
-@import "grid";
+
+@import "elements";
 @import "gallery";
 
+@import "entry";
+@import "page";

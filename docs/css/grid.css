@@ -1,0 +1,1 @@
+.site{display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:auto 1fr auto;align-content:center;grid-gap:2em;min-height:100vh}.site-header{grid-column:1/-1;background:#369}.site-main{grid-column:span 12;grid-row:2;z-index:5}.site-sidebar{grid-row:2;grid-column:span 4;background:green}.site-footer{grid-column:1/-1}

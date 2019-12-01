@@ -1,16 +1,23 @@
-body {
-}
-
-.site {
-    max-width: var(--layout-width, 60em);
+.site-wrapper {
+    max-width: 75em;
     margin: 0 auto;
 }
 
 .site-header {
-    @include bp(desktop) {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+
 }
 
+
+.site-media img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.site-content .site-wrapper {
+    
+}
+
+.site-footer {
+
+}

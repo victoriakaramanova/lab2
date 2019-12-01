@@ -1,85 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>
         
-             | CSS Advanced
+         | CSS Advanced
         
     </title>
-    <link rel="shortcut icon" href="/lab2/images/favicon-16x16.png" type="image/png">
-    <link href="/lab2/css/site.css" rel="stylesheet" >
+    <link rel="shortcut icon" href="/images/favicon-16x16.png" type="image/png">
+    <link href="/css/site.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <script>
-        window.addEventListener("load", (event)=> {
+        window.addEventListener("load", (event) => {
             document.querySelector("body")
-            .classList.add("loaded")
+                .classList.add("loaded")
         });
     </script>
 </head>
+
 <body class="page-">
 
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <input type="checkbox" id="site-nav-toggle" class="site-nav-toggle">
     <div class="site">
 
         <header class="site-header">
+            <div class="site-wrapper">
+                <div class="site-branding">
+                    <h1 class="site-title"><a href="CSS Advanced"></a></h1>
+                    <p>Di2Trade</p>
+                </div>
 
-            <div class="site-branding">
-                <h1><a href="/lab2CSS Advanced"></a></h1>
-                <p>Hi there!</p>
-            </div>
-
-            <label for="nav-toggle" class="nav-toggle-label">Menu</label>
-<nav class="nav location=header">
+                <label for="site-nav-toggle" class="site-nav-toggle-label">Menu</label>
+<nav class="site-nav location=header">
     <ul>
     
 
     
         
-
-            <li class="page-title-home">
-                <a href="/lab2/">Home</a>
-            </li>
-        
     
         
 
             <li class="page-title-contacts">
-                <a href="/lab2/contacts/">Contacts</a>
+                <a href="/contacts/">Contacts</a>
             </li>
         
     
         
 
             <li class="page-title-services">
-                <a href="/lab2/services/">Services</a>
+                <a href="/services/">Services</a>
             </li>
         
     
         
     
         
+
+            <li class="page-title-home">
+                <a href="/">Home</a>
+            </li>
+        
     
         
 
             <li class="page-title-about">
-                <a href="/lab2/about/">About</a>
+                <a href="/about/">About</a>
             </li>
         
     
         
 
             <li class="page-title-gallery">
-                <a href="/lab2/gallery/">Gallery</a>
+                <a href="/gallery/">Gallery</a>
             </li>
         
     
         
 
             <li class="page-title-grid">
-                <a href="/lab2/grid/">Grid</a>
+                <a href="/grid/">Grid</a>
             </li>
         
     
@@ -87,80 +89,47 @@
 
     
 </nav>
-            
+            </div>
         </header>
 
-        <main class="site-main">
-            <h1></h1>
+        <section class="site-media" style="background-image: url('/images/header16x9.jpg');">
+            <div class="site-wrapper">
+                <h2>A sleek, modern Jekyll theme for personal websites</h2>
+                <p>Personal is the perfect theme for developers, designers and other creatives.</p>
+                <ul class="social">
+                    <li><a href="#">F</a></li>
+                    <li><a href="#">T</a></li>
+                    <li><a href="#">L</a></li>
+                    <li><a href="#">I</a></li>
+                </ul>
 
-            404 Not Found
+            </div>
+        </section>
 
-            <img src="/lab2/images/header16x9.jpg" alt="">
+        <main class="site-content">
+            <div class="site-wrapper">
+                404 Not Found
+                <!-- <img src="/images/header16x9.jpg" alt=""> -->
+            </div>
         </main>
 
         <footer class="site-footer">
+            <div class="site-wrapper">
 
-            <label for="nav-toggle" class="nav-toggle-label">Menu</label>
-<nav class="nav location=footer">
-    <ul>
-    
-
-    
-        
-
-            <li class="page-title-home">
-                <a href="/lab2/">Home</a>
-            </li>
-        
-    
-        
-
-            <li class="page-title-contacts">
-                <a href="/lab2/contacts/">Contacts</a>
-            </li>
-        
-    
-        
-
-            <li class="page-title-services">
-                <a href="/lab2/services/">Services</a>
-            </li>
-        
-    
-        
-    
-        
-    
-        
-
-            <li class="page-title-about">
-                <a href="/lab2/about/">About</a>
-            </li>
-        
-    
-        
-
-            <li class="page-title-gallery">
-                <a href="/lab2/gallery/">Gallery</a>
-            </li>
-        
-    
-        
-
-            <li class="page-title-grid">
-                <a href="/lab2/grid/">Grid</a>
-            </li>
-        
-    
-    </ul>
-
-    
-</nav>
-            
-            <p>CSS Advanced &copy; All rights reserved</p>
+                <div class="info">
+                    <p>CSS Advanced</p>
+                    <p>A sleek, modern Jekyll theme for personal websites.</p>
+                    <p>&copy; 2019 Personal Jekyll Themes</p>
+                </div>
+                <ul class="social">
+                    <li><a href="#">F</a></li>
+                    <li><a href="#">T</a></li>
+                    <li><a href="#">L</a></li>
+                    <li><a href="#">I</a></li>
+                </ul>
+            </div>
         </footer>
     </div>
-    
 
 </body>
 </html>

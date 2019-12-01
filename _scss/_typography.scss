@@ -1,55 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,300i,400,400i,500,500i,700,700i|Fira+Sans:300,300i,400,400i,500,500i,700,700i&display=swap&subset=cyrillic,cyrillic-ext,latin-ext');
+
 html {
-    font-size: var(--font-size, 18px);
-    line-height: var(--font-line-height, 1.5);
-    font-family: var(--font-family-main, "Verdana, sans-serif");
+    font: 16px/1.5 "Fira Sans", sans-serif;
 }
 
-body, form, input, textarea, option, select, button {
+body, button, input, textarea, select, option {
     font: inherit;
 }
 
-p, ul, ol {
-    padding-bottom: var(--layout-padding-b, 1.5em);
-}
-
-ul, ol {
-    padding-left: 2.5em;
-}
-
-blockquote,
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-family-headings, var(--font-family-main));
+a {
+    text-decoration: none;
+    color: #369;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    padding-bottom: 0.5rem;
-    padding-top: 1.5rem;
-    font-weight: normal;
+    font-family: "Fira Sans Condensed", sans-serif;
+    line-height: 1.2;
+    padding-bottom: 0.5em;
 }
 
-h1 { font-size: 2.6em; }
-h2 { font-size: 2.0em; }
-h3 { font-size: 1.6em; }
-h4 { font-size: 1.4em; }
-h5 { font-size: 1.2em; }
-h6 { font-size: 1.0em; }
-
-blockquote {
-    padding: 0 2.5em;
-    border-left: 2px solid #000;
-    font-family: Georgia, serif;
-    margin-bottom: var(--layout-padding-b, 1.5em);
-}
-
-blockquote p {
-    font-style: italic;
-    /* padding: 0; */
-}
-
-blockquote p:last-child {
-    padding-bottom: 0;
-}
-
-blockquote p.author {
-    text-align: right;
-}
+h1 {font-size: 2.6em; }
+h2 {font-size: 2.2em; }
+h3 {font-size: 1.8em; }
+h4 {font-size: 1.4em; }
+h5 {font-size: 1.2em; }
+h6 {font-size: 1em; }
