@@ -1,9 +1,18 @@
-.site-header .site-wrapper {
-    display: flex;
-    align-items: center;
-    /* text-align: center; */
-    justify-content: space-between;
-    padding: 2em 0;
+.site-header {
+    position: relative;
+    z-index: 2000;
+
+    .site-wrapper {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        @include bp(desktop) {
+            display: flex;
+            align-items: center;
+            /* text-align: center; */
+            justify-content: space-between;
+        }
+    }
 }
 
 .site-title {
@@ -12,7 +21,7 @@
 }
 
 .site-media {
-    height: 75vh;
+    min-height: 50vh;
     overflow: hidden;
     background-position: center;
     background-size: cover;
@@ -20,7 +29,8 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
+    padding: 2em 0;
 }
 
 .site-media:before {
@@ -36,8 +46,13 @@
     color: #fff;
     position: relative;
     z-index: 10;
-    font-size: 1.6rem;
-    padding-right: 10em;
+    font-size: 1.6em;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+
+    @include bp(desktop) {
+        padding-right: 10em;
+    }
 }
 
 .site-media p,

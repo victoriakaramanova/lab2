@@ -39,19 +39,28 @@
             </div>
         </header>
 
-        <section class="site-media" style="background-image: url('{{ site.baseurl }}/images/header16x9.jpg');">
+        {% if page.fancy_title %}
+        <!-- <section class="site-media" style="background-image: url('{{ site.baseurl }}/images/header16x9.jpg');"> -->
+        <section class="site-media" style="background-image: url('{{ site.baseurl }}{{ page.featured_image }}');">
+            
             <div class="site-wrapper">
-                <h2>A sleek, modern Jekyll theme for personal websites</h2>
-                <p>Personal is the perfect theme for developers, designers and other creatives.</p>
+                {% if page.fancy_title %}
+                <h2>{{ page.fancy_title }}</h2>
+                {% endif %}
+                {% if page.fancy_desc %}
+                <p>{{ page.fancy_desc }}</p>
+                {% endif %}
+                {% if page.fancy_social == 1 %}
                 <ul class="social">
                     <li><a href="#">F</a></li>
                     <li><a href="#">T</a></li>
                     <li><a href="#">L</a></li>
                     <li><a href="#">I</a></li>
                 </ul>
-
+                {% endif %}
             </div>
         </section>
+        {% endif %}
 
         <main class="site-content">
             <div class="site-wrapper">
