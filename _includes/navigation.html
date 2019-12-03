@@ -1,11 +1,11 @@
-<label for="site-nav-toggle" class="site-nav-toggle-label">Menu</label>
+<label for="site-nav-toggle" class="site-nav-toggle-label"><i class="fas fa-bars"></i></label>
 <nav class="site-nav location={{ include.location }}">
     <ul>
         {% assign navigation_pages = site.pages | sort:"order" %}
 
         {% for current_page in navigation_pages %}
         {% if current_page.title %}
-
+        <!-- <li><a class="logo" href="{{ site.baseurl }}/images/logo.jpg">logo</a></li> -->
         <li
             class="page-title-{{ current_page.title | slugify }}{% if current_page.url == page.url %} current_page{% endif %}">
             <a href="{{ site.baseurl }}{{ current_page.url }}">{{ current_page.title }}</a>

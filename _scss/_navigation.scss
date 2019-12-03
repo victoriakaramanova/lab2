@@ -85,9 +85,9 @@
     }
 
     li:hover > a,
-   .current_page > a,
-    &:focus,
-    &:hover {
+   .current-page > a,
+    a:focus,
+    a:hover {
         background: #369;
         color: #FFF;
     }
@@ -120,3 +120,8 @@
 
     } 
 }
+
+// li > .logo {
+//     margin: 0 2em;
+// }
+

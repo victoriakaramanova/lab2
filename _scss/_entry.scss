@@ -33,9 +33,9 @@
 }
 
 .entry-media img {
-    height: 600px;
     display: block;
-    width: 600px;
+    max-width: 40em;
+    height: auto;
     position: absolute;
     top: 50%; left: 50%; 
     transform-origin: center; 
@@ -54,12 +54,12 @@
     z-index: 20;
     box-shadow: 0 0 1.5em 0 rgba(0, 0, 0, 0.07);
     padding: 2em;
+
      @include bp(desktop) {
+         flex-grow: 1;
        margin: 2em 2em 2em -2em;
     }
 }
-
-    
 
 .entry-title {
     padding-bottom: 0.5rem;
@@ -80,7 +80,7 @@
 }
 
 .entry:nth-child(even) .entry-content {
-    @include bp(mobile) {
+    @include bp(desktop) {
         margin: 2em -2em 2em 2em;
     }
 }
